@@ -1,0 +1,170 @@
+body {
+    font-size: large;
+    font-family: var(--sl-font-sans);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .container {
+    width: 30%;
+    margin: 20px auto;
+    text-align: justify;
+    flex-grow: 1;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    width: 30%;
+    justify-content: center;
+    align-items: flex-end; /* Ensure alignment */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main-input {
+    width: 100%;
+  }
+
+  .deepseek-text {
+    color: white;
+    text-align: justify;
+  }
+
+  .user {
+    background-color: #2f2f36;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+    margin-bottom: 1em;
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    width: fit-content;
+  }
+
+  .thoughts {
+    color: #bbbbbb;
+  }
+
+  sl-details::part(summary) {
+    font-weight: bold;
+  }
+
+  /* The rainbow border effect */
+  sl-details {
+    position: relative;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  sl-details::part(content) {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* Rainbow border using border-image */
+  sl-details::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: 5px;
+    background: linear-gradient(
+      45deg,
+      #25b2e7,
+      #c998e7,
+      #e499ab,
+      #f06fba,
+      #f2c456,
+      #62d2e0,
+      #efeac9,
+      #ff7788
+    );
+    background-size: 400% 400%;
+    animation: rainbow 15s linear infinite;
+  }
+
+  /* Smooth animation for the rainbow effect */
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  sl-skeleton {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+/* Style for the thoughts logo */
+.thoughts-logo {
+    width: 4em;
+    position: absolute;
+    left: -5em;
+    top: -0.6em;
+}
+
+/* Style for the thought process (text) */
+.thoughts {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0; /* Ensure no extra margin is added */
+}
+
+.thoughts-container, #skeletons {
+    position: relative;
+}
+
+.feedback-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-container {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+.feedback-dropdown-button {
+    width: 100%;
+}
+
+.buttons-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sl-button {
+    margin: 5px;
+}
+
+.response-div {
+    margin-bottom: 20px;
+    padding-bottom: 4em;
+}
+

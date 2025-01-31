@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gen AI Storytelling</title>
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/themes/dark.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Gen AI Storytelling</h1>
+
+    <!-- CONVERSATION CONTAINER -->
+    <div class="container"></div>
+
+    <!-- PROMPT INPUTS -->
+    <div class="inputs">
+      <sl-textarea
+        pill
+        class="main-input"
+        spellcheck="true"
+        clearable
+        type="text"
+        id="prompt"
+        placeholder="Enter prompt"
+        resize="auto"
+        rows="1"
+      ></sl-textarea>
+      <sl-button id="send-prompt" pill onclick="fetchData()"
+        ><sl-icon name="send"></sl-icon>
+      </sl-button>
+    </div>
+  </body>
+</html>
